@@ -1,0 +1,125 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background: url("http://localhost:8000/static/92a47ed0bc8952559bf148a103e967c2/c512e/career_mid_head.webp");
+    background-size: cover;
+}
+
+.ui {
+    padding: 12em 1em 0;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+menu {
+    display: flex;
+    padding: 1em;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 2em;
+    height: 68px;
+    align-items: center;
+}
+
+input[type=radio] + label + div {
+    display: none;
+    width: 100%;
+}
+
+input[type=radio]:checked + label + div {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+button {
+    display: block;
+    margin-top: 1em;
+}
+
+.menu-1-container {
+    height: 134px;
+    overflow: hidden;
+}
+
+.menu-1 menu:nth-child(odd) {
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.menu-1 menu:nth-child(even) {
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+}
+
+.menu-1 {
+    transition: .3s ease-out all;
+}
+
+.down .menu-1 {
+    transform: translate3d(0, -68px, 0);
+}
+
+.menu-2, .menu-3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .3s ease-out all;
+}
+
+.down .menu-2:first-child, .menu-2:last-child {
+    transform: translate3d(0, -134px, 0);
+}
+
+.menu-2:first-child, .down .menu-2:last-child {
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-2:first-child menu:nth-child(odd), .menu-2:last-child menu:nth-child(even) {
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.menu-2:first-child menu:nth-child(even), .menu-2:last-child menu:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+}
+
+.menu-3:first-child menu:nth-child(odd) {
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.menu-3:first-child menu:nth-child(even) {
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+}
+
+.menu-3 {
+    transform: translate3d(0, 0, 0);
+}
+
+.down .menu-3 {
+    transform: translate3d(0, -68px, 0);
+}
+
+.menu-3 menu {
+    transition-delay: .1s;
+    transition: .4s ease-out all;
+}
+
+.menu-3 menu:last-child {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.down .menu-3 menu:last-child {
+    pointer-events: auto;
+    opacity: 1;
+}

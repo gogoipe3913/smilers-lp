@@ -1,0 +1,60 @@
+@mixin centering() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+$breakpoints: (
+        'md': '768px',
+        'lg': '992px',
+        'xl': '1440px',
+) !default;
+@mixin min-width($breakpoint: md) {
+  @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+@mixin max-width($breakpoint: md) {
+  @media screen and (max-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+  color: $background;
+  border-color: $border;
+
+  @include hover() {
+    color: $hover-background;
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &.focus {
+    color: $hover-background;
+    border-color: $hover-border;
+    box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix($background, $border, 15%), .5);
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    color: $background;
+    background-color: $background;
+    border-color: $border;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $active-background;
+    background-color: $active-background;
+    border-color: $active-border;
+
+    &:focus {
+      // box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix($background, $border, 15%), .5);
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix($background, $border, 15%), .5);
+    }
+  }
+}

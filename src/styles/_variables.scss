@@ -1,0 +1,36 @@
+$blue: #65b7c2 !default;
+$gray: #898989 !default;
+$black: #231815 !default;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "blue": $blue,
+    "gray": $gray,
+    "black": $black,
+  ),
+  $colors
+);
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 3,
+    ),
+  ),
+  $spacers
+);
