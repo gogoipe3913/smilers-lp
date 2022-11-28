@@ -1,0 +1,94 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.SelectionFlow {
+  text-align: center;
+  color: $global-color-white;
+
+  & &__upperColumn {
+    padding: 120px 20% 0;
+  }
+
+  & &__upperColumnText {
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+    }
+  }
+
+  & &__upperColumnSubText {
+    font-size: 20px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  & &__upperColumnText + &__upperColumnSubText {
+    margin-top: 12px;
+  }
+
+  & &__lowerColumn {
+    padding: 60px 20% 120px;
+    font-size: 28px;
+    font-weight: bold;
+
+    @media screen and (max-width: 428px) {
+      padding: 60px 4% 120px;
+    }
+  }
+
+  & &__flowItemText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 28px;
+    border: 1px solid $global-color-white;
+
+    @media screen and (max-width: 428px) {
+      border-radius: 12px;
+    }
+  }
+
+  & &__flowItemArrowDown {
+    width: 36px;
+    margin: 24px 0;
+  }
+
+  & &__buttons {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 428px) {
+      flex-direction: column;
+    }
+  }
+
+  & &__button {
+    width: 420px;
+
+    @media screen and (max-width: 428px) {
+      width: 100%;
+    }
+  }
+
+  & &__button + &__button {
+    margin-left: 32px;
+
+    @media screen and (max-width: 428px) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+
+  & &__buttonImage {
+    width: 100%;
+  }
+}

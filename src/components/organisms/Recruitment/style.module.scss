@@ -1,0 +1,503 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.Recruitment {
+  text-align: center;
+  color: $global-color-white;
+
+  & &__upperColumn {
+    padding: 120px 20% 0;
+    height: 400px;
+    background-image: url("../../../images/recruitment/upperBackground.png");
+    background-size: cover;
+
+    @media screen and (max-width: 428px) {
+      padding: 120px 4% 0;
+      height: 280px;
+      background-image: url("../../../images/explainSmilers/spUpperBackground.png");
+    }
+  }
+
+  & &__upperColumnText {
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+    }
+  }
+
+  & &__upperColumnSubText {
+    font-size: 20px;
+  }
+
+  & &__upperColumnText + &__upperColumnSubText {
+    margin-top: 12px;
+  }
+
+  & &__image {
+    margin: 80px auto 0;
+    width: 100%;
+  }
+
+  & &__imageBody {
+    width: 100%;
+    border-radius: 40px;
+
+    @media screen and (max-width: 428px) {
+      display: none;
+    }
+  }
+
+  & &__imageBodySp {
+    width: 100%;
+    border-radius: 40px;
+
+    @media screen and (min-width: 429px) {
+      display: none;
+    }
+  }
+
+  // middle column
+  & &__middleColumn {
+    // padding-topは目視で確認して調整
+    padding: 328px 20% 0;
+
+    @media screen and (max-width: 428px) {
+      padding: 160px 4% 0;
+    }
+  }
+
+  & &__middleColumnHeadingText {
+    margin-top: 100px;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+    }
+  }
+
+  & &__middleColumnHeadingSubText {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 16px;
+    }
+  }
+
+  & &__middleColumnHeadingText + &__middleColumnHeadingSubText {
+    margin-top: 16px;
+  }
+
+  & &__separator {
+    margin: 60px auto 0;
+    width: 72px;
+    height: 8px;
+    background-color: $global-color-green;
+  }
+
+  & &__middleColumnExplain {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 16px;
+    }
+  }
+
+  & &__separator + &__middleColumnExplain {
+    margin-top: 60px;
+  }
+
+  & &__middleColumnExplain + &__middleColumnExplain {
+    margin-top: 16px;
+  }
+
+  & &__middleColumnMessage {
+    font-size: 24px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 16px;
+    }
+  }
+
+  & &__middleColumnExplain + &__middleColumnMessage {
+    margin-top: 60px;
+  }
+
+  & &__middleColumnMessage + &__middleColumnMessage {
+    margin-top: 16px;
+  }
+
+  & &__lowerColumn {
+    // padding-topは目視で確認して調整
+    padding: 160px 20% 120px;
+
+    @media screen and (max-width: 428px) {
+      padding: 80px 4% 60px;
+    }
+  }
+
+  & &__lowerColumnTitle {
+    font-size: 44px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+    }
+  }
+
+  & &__introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    padding: 0 96px 100px;
+    height: auto;
+    border: 1px solid $global-color-white;
+    border-radius: 20px;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 100px;
+      padding: 0 16px 100px;
+    }
+  }
+
+  & &__introductionIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -36px;
+    width: 68px;
+    height: 68px;
+    font-size: 32px;
+    font-weight: bold;
+    color: $global-color-purple;
+    background-color: $global-color-white;
+    border-radius: 50%;
+  }
+
+  & &__introductionTitle {
+    margin-top: 44px;
+  }
+
+  & &__introductionTitleSubText {
+    font-size: 24px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 16px;
+    }
+  }
+
+  & &__introductionTitleText {
+    font-size: 44px;
+    font-weight: bold;
+
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+    }
+  }
+
+  & &__introductionTitleSubText + &__introductionTitleText {
+    margin-top: 8px;
+  }
+
+  & &__introductionTeam {
+    display: flex;
+    padding-top: 60px;
+    width: 100%;
+    border-top: 1px solid $global-color-white;
+
+    @media screen and (max-width: 428px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  & &__introductionTitle + &__introductionTeam {
+    margin-top: 40px;
+  }
+
+  & &__introductionSupervisorImage {
+    display: block;
+    width: 348px;
+    height: 348px;
+
+    @media screen and (max-width: 428px) {
+      margin: 0 auto;
+      width: 218px;
+      height: 218px;
+    }
+  }
+
+  & &__introductionSupervisorName {
+    margin-top: 28px;
+    font-size: 28px;
+    letter-spacing: 0.08em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 24px;
+    }
+  }
+
+  & &__introductionSupervisorNameBold {
+    margin-left: 8px;
+    font-weight: bold;
+  }
+
+  & &__introductionSupervisorStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 16px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 14px;
+    }
+  }
+
+  & &__arrowRightSmall {
+    margin: 0 16px;
+    width: 8px;
+    height: 14px;
+
+    @media screen and (max-width: 428px) {
+      margin: 0 8px;
+    }
+  }
+
+  & &__introductionTeamRight {
+    margin-left: 28px;
+
+    @media screen and (max-width: 428px) {
+      margin-left: 0;
+    }
+  }
+
+  & &__introductionTeamRightSeparatorSp {
+    margin: 60px auto 0;
+    width: 72px;
+    height: 8px;
+    background-color: $global-color-purple;
+
+    @media screen and (min-width: 429px) {
+      display: none;
+    }
+  }
+
+  & &__introductionTeamRightTitle {
+    padding-left: 16px;
+    line-height: 1.4;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    border-left: 4px solid $global-color-purple;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 40px;
+      text-align: center;
+      border: none;
+    }
+  }
+
+  & &__introductionMovieList {
+    margin-top: 24px;
+  }
+
+  & &__introductionMovieItem {
+    display: flex;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  & &__introductionMovieItem + &__introductionMovieItem {
+    margin-top: 24px;
+  }
+
+  & &__introductionMovieThumbnail {
+    display: block;
+    width: 160px;
+    height: 88px;
+    object-fit: contain;
+
+    @media screen and (max-width: 428px) {
+      width: 92px;
+      height: 52px;
+      object-fit: contain;
+    }
+  }
+
+  & &__introductionMovieText {
+    margin-left: 28px;
+  }
+
+  & &__introductionMovieInfomation {
+    line-height: 1.4;
+  }
+
+  & &__introductionMovieViews {
+    font-weight: bold;
+  }
+
+  & &__introductionMovieCaption {
+    margin-top: 16px;
+    line-height: 1.8;
+    color: $global-color-gray-2;
+
+    @media screen and (max-width: 428px) {
+      font-size: 12px;
+    }
+  }
+
+  & &__introductionChannels {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+
+    @media screen and (max-width: 428px) {
+      flex-direction: column;
+    }
+  }
+
+  & &__introductionChannel {
+    padding: 40px 28px;
+    width: calc((100% - 20px) / 2);
+    background-color: $global-color-gray-2;
+    border-radius: 12px;
+
+    @media screen and (max-width: 428px) {
+      width: 84%;
+    }
+  }
+
+  & &__introductionChannel + &__introductionChannel {
+    margin-left: 28px;
+
+    @media screen and (max-width: 428px) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+
+  & &__introductionChannelUpper {
+    display: flex;
+  }
+
+  & &__introductionChannelThumbnail {
+    width: 68px;
+  }
+
+  & &__introductionChannelUpperText {
+    margin-left: 20px;
+  }
+
+  & &__introductionChannelStatus {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  & &__introductionChannelPosition {
+    padding: 8px 0;
+    width: 46px;
+    color: $global-color-purple;
+    font-weight: bold;
+    background-color: $global-color-white;
+    border-radius: 6px;
+  }
+
+  & &__introductionChannelName {
+    margin-left: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  & &__introductionChannelResistor {
+    margin-top: 12px;
+    display: flex;
+
+    @media screen and (max-width: 428px) {
+      font-size: 12px;
+    }
+  }
+
+  & &__introductionChannelResistorNumber {
+    font-weight: bold;
+  }
+
+  & &__introductionChannelLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: calc(100% - 8px * 2);
+    height: 44px;
+    font-weight: bold;
+    background-color: $global-color-purple;
+    border-radius: 22px;
+  }
+
+  & &__allResistor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 36px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 18px;
+    }
+  }
+
+  & &__arrowRight {
+    margin: 0 20px;
+    width: 18px;
+
+    @media screen and (max-width: 428px) {
+      width: 8px;
+      margin: 0 8px;
+    }
+  }
+
+  & &__channelLink {
+    margin-top: 60px;
+  }
+
+  & &__channelLinkMessage {
+    font-size: 20px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 16px;
+    }
+  }
+
+  & &__channelLinkBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px auto 0;
+    width: 540px;
+    height: 88px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    background-color: $global-color-purple;
+    border-radius: 44px;
+
+    @media screen and (max-width: 428px) {
+      width: 100%;
+      height: 52px;
+      font-size: 18px;
+    }
+  }
+}

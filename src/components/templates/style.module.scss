@@ -1,0 +1,11 @@
+@import "../../styles/reset";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.LpTemplate {
+  // TODO: 後で消す
+  background-color: $global-color-gray-1;
+  font-family: "Noto Sans CJK JP";
+  height: auto;
+  overflow-x: hidden;
+}

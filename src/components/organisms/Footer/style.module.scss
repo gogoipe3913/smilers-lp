@@ -1,0 +1,15 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  color: $global-color-white;
+  font-size: 14px;
+  background-image: url("../../../images/footer/background.png");
+  background-size: contain;
+}

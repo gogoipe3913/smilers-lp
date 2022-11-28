@@ -1,16 +1,10 @@
-$blue: #65b7c2 !default;
-$gray: #898989 !default;
-$black: #231815 !default;
-
-$colors: () !default;
-$colors: map-merge(
-  (
-    "blue": $blue,
-    "gray": $gray,
-    "black": $black,
-  ),
-  $colors
-);
+/** colors */
+$global-color-white: #fff;
+$global-color-black: #000;
+$global-color-gray-1: #222;
+$global-color-gray-2: #888;
+$global-color-purple: #54479b;
+$global-color-green: #499b70;
 
 $spacer: 1rem !default;
 $spacers: () !default;

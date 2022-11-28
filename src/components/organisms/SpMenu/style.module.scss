@@ -1,0 +1,60 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.SpMenu {
+  position: fixed;
+  top: 0;
+  width: calc(100vw - 16px * 2);
+  height: 100vh;
+  padding: 0 16px;
+  background-color: $global-color-white;
+  z-index: 999;
+
+  @media screen and (min-width: 429px) {
+    display: none;
+  }
+
+  & &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  & &__logo {
+    width: 120px;
+  }
+
+  & &__closeButtonImage {
+    width: 20px;
+  }
+
+  & &__navigation {
+    padding: 40px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1px solid $global-color-black;
+  }
+
+  & &__navigationLink + &__navigationLink {
+    margin-top: 40px;
+  }
+
+  & &__buttons {
+    padding: 0 16px;
+  }
+
+  & &__entryButton {
+    display: block;
+    width: 100%;
+  }
+
+  & &__entryButton + &__entryButton {
+    margin-top: 28px;
+  }
+
+  & &__entryButtonBody {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+import React, { FunctionComponent } from "react";
+import * as styles from "./style.module.scss";
+
+const Top: FunctionComponent = () => {
+  return (
+    <div className={styles.Top}>
+      <h1 className={styles.Top__heading}>
+        <div className={styles.Top__headingSubTextBox}>
+          <div className={styles.Top__separator} />
+          <p className={styles.Top__headingSubText}>サッカー×エンタメ</p>
+          <div className={styles.Top__separator} />
+        </div>
+        <p className={styles.Top__headingText}>SMILERS始動</p>
+      </h1>
+
+      <p className={styles.Top__message}>サッカーの力で、人々を笑顔にする。</p>
+      <p className={styles.Top__messageEnglish}>Soccer For Good Smile</p>
+
+      <p className={styles.Top__explain}>SMILERS選手・コーチ募集サイト</p>
+      <div className={styles.Top__explainSp}>
+        <p>SMILERS</p>
+        <p>選手・コーチ募集サイト</p>
+      </div>
+      <div className={styles.Top__scrollIndicator}>
+        <p className={styles.Top__scrollIndicatorText}>SCROLL</p>
+        <div className={styles.Top__scrollLine} />
+      </div>
+    </div>
+  );
+};
+
+export default Top;

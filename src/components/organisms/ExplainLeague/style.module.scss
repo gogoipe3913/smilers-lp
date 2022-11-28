@@ -1,0 +1,248 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.ExplainLeague {
+  text-align: center;
+  color: $global-color-white;
+
+  & &__upperColumn {
+    padding: 120px 20% 0;
+    height: 400px;
+    background-color: $global-color-purple;
+
+    @media screen and (max-width: 428px) {
+      padding: 100px 4% 0;
+      height: 260px;
+    }
+  }
+
+  & &__upperColumnText {
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+
+  & &__upperColumnSubText {
+    font-size: 20px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 13px;
+    }
+  }
+
+  & &__upperColumnText + &__upperColumnSubText {
+    margin-top: 12px;
+  }
+
+  & &__image {
+    margin: 80px auto 0;
+    width: 100%;
+  }
+
+  & &__imageBody {
+    width: 100%;
+    border-radius: 40px;
+
+    @media screen and (max-width: 428px) {
+      display: none;
+    }
+  }
+
+  & &__imageBodySp {
+    width: 100%;
+    border-radius: 20px;
+
+    @media screen and (min-width: 429px) {
+      display: none;
+    }
+  }
+
+  // lower column
+  & &__lowerColumn {
+    // padding-topは目視で確認して調整
+    padding: 200px 20% 120px;
+
+    @media screen and (max-width: 428px) {
+      padding: 40px 4% 120px;
+    }
+  }
+
+  & &__lowerColumnHeading {
+    margin-top: 100px;
+    text-align: left;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+    }
+  }
+
+  & &__lowerColumnHeadingText + &__lowerColumnHeadingText {
+    margin-top: 8px;
+  }
+
+  & &__separator {
+    margin-top: 60px;
+    width: 72px;
+    height: 8px;
+    background-color: $global-color-purple;
+  }
+
+  & &__lowerColumnExplain {
+    text-align: left;
+
+    @media screen and (max-width: 428px) {
+      line-height: 1.6;
+    }
+  }
+
+  & &__separator + &__lowerColumnExplain {
+    margin-top: 28px;
+  }
+
+  & &__lowerColumnExplain + &__lowerColumnExplain {
+    margin-top: 8px;
+  }
+
+  & &__explainList {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 60px;
+      flex-direction: column;
+    }
+  }
+
+  & &__explainItem {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc((60% - 28px * 2 - 2px * 6) / 3);
+    height: 200px;
+    border: 2px solid $global-color-white;
+    border-radius: 16px;
+    background-color: $global-color-gray-1;
+
+    @media screen and (max-width: 428px) {
+      width: 100%;
+    }
+  }
+
+  & &__explainItem + &__explainItem {
+    margin-left: 28px;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+
+  & &__explainItemSubText {
+    font-size: 28px;
+  }
+
+  & &__explainItemText {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  & &__explainItemSubText + &__explainItemText {
+    margin-top: 12px;
+  }
+
+  & &__overview {
+    padding: 140px 100px;
+    color: $global-color-black;
+    background-color: $global-color-white;
+    border-radius: 16px;
+
+    @media screen and (max-width: 428px) {
+      padding: 60px 16px;
+    }
+  }
+
+  & &__explainList + &__overview {
+    margin-top: 100px;
+  }
+
+  & &__overviewTitle {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    color: $global-color-purple;
+
+    @media screen and (max-width: 428px) {
+      font-size: 28px;
+    }
+  }
+
+  & &__overviewSubTitle {
+    letter-spacing: 0.08em;
+    color: $global-color-purple;
+
+    @media screen and (max-width: 428px) {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  & &__overviewTitle + &__overviewSubTitle {
+    margin-top: 8px;
+  }
+
+  & &__overviewList {
+    border-top: 1px solid $global-color-black;
+  }
+
+  & &__overviewSubTitle + &__overviewList {
+    margin-top: 60px;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 40px;
+    }
+  }
+
+  & &__overviewItem {
+    display: flex;
+    padding: 24px 8px;
+
+    // リストの上下どちらにもボーダーがあるので、各アイテム自体は下線を持つのを許容
+    border-bottom: 1px solid $global-color-black;
+
+    @media screen and (max-width: 428px) {
+      flex-direction: column;
+    }
+  }
+
+  & &__overviewItemTitle {
+    flex-shrink: 0;
+    width: 200px;
+    line-height: 1.6;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  & &__overviewItemContentList {
+    text-align: left;
+  }
+
+  & &__overviewItemContent {
+    line-height: 1.6;
+  }
+
+  & &__overviewItemContent + &__overviewItemContent {
+    margin-top: 8px;
+  }
+}

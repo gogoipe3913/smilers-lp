@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
+import LpTemplate from "../components/templates";
 
 export default () => {
-  return <div className="Smilers">ああああ</div>;
+  return (
+    <div className="Smilers">
+      <LpTemplate />
+    </div>
+  );
 };

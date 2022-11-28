@@ -1,0 +1,262 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.ExplainSmilers {
+  text-align: center;
+  color: $global-color-white;
+
+  & &__upperColumn {
+    padding: 120px 20% 0;
+    height: 480px;
+    background-image: url("../../../images/explainSmilers/upperBackground.png");
+    background-size: cover;
+
+    @media screen and (max-width: 428px) {
+      padding: 120px 4% 0;
+      height: 320px;
+      background-image: url("../../../images/explainSmilers/spUpperBackground.png");
+    }
+  }
+
+  & &__upperColumnText {
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+
+  & &__upperColumnSubText {
+    font-size: 20px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 13px;
+    }
+  }
+
+  & &__upperColumnText + &__upperColumnSubText {
+    margin-top: 12px;
+  }
+
+  // lower column
+  & &__lowerColumn {
+    // padding-topは目視で確認して調整
+    padding: 0 20% 120px;
+
+    @media screen and (max-width: 428px) {
+      padding: 0 4% 60px;
+    }
+  }
+
+  & &__explainSupervisor {
+    margin-top: -60px;
+    border-radius: 20px;
+    background-color: $global-color-white;
+
+    @media screen and (max-width: 428px) {
+      margin-top: -120px;
+    }
+  }
+
+  & &__explainSupervisor + &__explainSupervisor {
+    margin-top: 400px;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 200px;
+    }
+  }
+
+  & &__explainSupervisorImage {
+    margin-top: -180px;
+    width: 340px;
+    border: 12px solid $global-color-white;
+    border-radius: 50%;
+
+    @media screen and (max-width: 428px) {
+      margin-top: -60px;
+      width: 120px;
+    }
+  }
+
+  & &__explainSupervisorImage + &__explainSupervisorExplainImage {
+    margin-top: 60px;
+  }
+
+  & &__explainSupervisorExplainImage {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+
+    @media screen and (max-width: 428px) {
+      width: 80%;
+    }
+  }
+
+  & &__separator {
+    margin: 60px auto 0;
+    width: 72px;
+    height: 8px;
+    background-color: $global-color-green;
+  }
+
+  & &__explainSupervisorExplain {
+    color: $global-color-black;
+
+    @media screen and (max-width: 428px) {
+      padding: 0 16px;
+    }
+  }
+
+  & &__separator + &__explainSupervisorExplain {
+    margin-top: 60px;
+  }
+
+  & &__explainSupervisorExplainText {
+    font-size: 18px;
+    font-weight: bold;
+
+    @media screen and (max-width: 428px) {
+      font-size: 16px;
+    }
+  }
+
+  & &__explainSupervisorExplainText + &__explainSupervisorExplainText {
+    margin-top: 12px;
+  }
+
+  & &__smilersImage {
+    width: 80%;
+    border-radius: 20px;
+
+    @media screen and (max-width: 428px) {
+      width: 90%;
+      border-radius: 12px;
+    }
+  }
+
+  & &__explainSupervisorExplain + &__smilersImage {
+    margin-top: 40px;
+  }
+
+  & &__profile {
+    color: $global-color-black;
+  }
+
+  & &__smilersImage + &__profile {
+    margin-top: 80px;
+  }
+
+  & &__profileTitleName {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @media screen and (max-width: 428px) {
+      display: block;
+      font-size: 20px;
+    }
+  }
+
+  & &__profileTitleText {
+    font-size: 24px;
+    letter-spacing: 0.3em;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 8px;
+      display: block;
+      font-size: 16px;
+    }
+  }
+
+  & &__profileTitleName + &__profileTitleText {
+    margin-left: 16px;
+  }
+
+  & &__profileList {
+    padding: 40px 100px 80px;
+
+    @media screen and (max-width: 428px) {
+      padding: 20px 5% 20px;
+    }
+  }
+
+  & &__profileItem {
+    display: flex;
+    padding: 24px 8px;
+    // リストの上下どちらにもボーダーがあるので、各アイテム自体は下線を持つのを許容
+    border-bottom: 1px solid $global-color-black;
+
+    &:first-child {
+      border-top: 1px solid $global-color-black;
+    }
+
+    @media screen and (max-width: 428px) {
+      flex-direction: column;
+    }
+  }
+
+  & &__profileItemTitle {
+    flex-shrink: 0;
+    width: 200px;
+    line-height: 1.6;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  & &__profileItemContentList {
+    text-align: left;
+  }
+
+  & &__profileItemContent {
+    line-height: 1.6;
+  }
+
+  & &__profileItemContent + &__profileItemContent {
+    margin-top: 8px;
+  }
+
+  & &__explainCoacher {
+    margin-top: 60px;
+    color: $global-color-black;
+  }
+
+  & &__explainCoacherText {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  & &__explainCoacherSubText {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  & &__explainCoacherText + &__explainCoacherSubText {
+    margin-top: 8px;
+  }
+
+  & &__explainCoacherSubText + &__explainCoacherArrowDown {
+    margin-top: 12px;
+  }
+
+  & &__explainCoacherMovie {
+    margin: 40px auto 80px;
+
+    @media screen and (max-width: 428px) {
+      display: none;
+    }
+  }
+
+  & &__explainCoacherMovieSp {
+    margin: 40px auto 80px;
+
+    @media screen and (min-width: 429px) {
+      display: none;
+    }
+  }
+}

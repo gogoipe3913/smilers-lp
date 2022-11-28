@@ -1,0 +1,142 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.Top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 24px;
+  text-align: center;
+  // 画面縦幅 - ヘッダーの高さ
+  height: calc(100vh - 60px);
+  max-height: 1200px;
+  // TODO: 後で消す
+  color: $global-color-white;
+  background-image: url("../../../images/top/background.png");
+  background-size: cover;
+
+  @media screen and (max-width: 428px) {
+    background-image: url("../../../images/top/spBackground.png");
+  }
+
+  & &__heading {
+    text-align: center;
+  }
+
+  & &__headingSubTextBox {
+    margin: 0 auto;
+    width: 328px;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 0.1em;
+
+    @media screen and (max-width: 428px) {
+      width: 240px;
+      font-size: 20px;
+    }
+  }
+
+  & &__headingSubText {
+    margin: 8px 0;
+  }
+
+  & &__separator {
+    width: 100%;
+    height: 6px;
+    background-color: $global-color-white;
+  }
+
+  & &__headingText {
+    font-size: 120px;
+    letter-spacing: 0.1em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 72px;
+    }
+  }
+
+  & &__headingSubTextBox + &__headingText {
+    margin-top: 20px;
+  }
+
+  & &__heading + &__message {
+    margin-top: 20px;
+  }
+
+  & &__message {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+
+    @media screen and (max-width: 428px) {
+      font-size: 18px;
+    }
+  }
+
+  & &__messageEnglish {
+    font-size: 14px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 12px;
+    }
+  }
+
+  & &__message + &__messageEnglish {
+    margin-top: 8px;
+  }
+
+  & &__explain {
+    margin: 40px auto 0;
+    padding: 16px 0;
+    width: 800px;
+    letter-spacing: 0.1em;
+    font-size: 32px;
+    background-image: url("../../../images//top/textBackground.png");
+    background-size: cover;
+
+    @media screen and (max-width: 428px) {
+      display: none;
+      font-size: 22px;
+      width: 400px;
+      background-image: url("../../../images//top/spTextBackground.png");
+    }
+  }
+
+  & &__explainSp {
+    margin: 40px auto 0;
+    padding: 16px 0;
+    width: 360px;
+    letter-spacing: 0.1em;
+    font-size: 22px;
+    background-image: url("../../../images//top/spTextBackground.png");
+    background-size: cover;
+
+    @media screen and (min-width: 429px) {
+      display: none;
+    }
+  }
+
+  & &__scrollIndicator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & &__scrollIndicatorText {
+    margin-left: -24px;
+    width: fit-content;
+    font-size: 12px;
+    transform: rotate(-90deg) translateX(-60%);
+  }
+
+  & &__scrollLine {
+    margin: 0 auto;
+    width: 2px;
+    height: 100px;
+    background-color: $global-color-white;
+  }
+}
