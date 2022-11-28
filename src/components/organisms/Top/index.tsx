@@ -18,8 +18,8 @@ const Top: FunctionComponent = () => {
 
       <p className={styles.Top__explain}>SMILERS選手・コーチ募集サイト</p>
       <div className={styles.Top__explainSp}>
-        <p>SMILERS</p>
-        <p>選手・コーチ募集サイト</p>
+        <p className={styles.Top__explainSpText}>SMILERS</p>
+        <p className={styles.Top__explainSpText}>選手・コーチ募集サイト</p>
       </div>
       <div className={styles.Top__scrollIndicator}>
         <p className={styles.Top__scrollIndicatorText}>SCROLL</p>
