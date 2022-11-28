@@ -166,7 +166,7 @@
 
     @media screen and (max-width: 428px) {
       margin-top: 100px;
-      padding: 0 16px 100px;
+      padding: 0 16px 48px;
     }
   }
 
@@ -270,7 +270,7 @@
     height: 14px;
 
     @media screen and (max-width: 428px) {
-      margin: 0 8px;
+      margin: 0 6px;
     }
   }
 
@@ -381,7 +381,8 @@
     border-radius: 12px;
 
     @media screen and (max-width: 428px) {
-      width: 84%;
+      padding: 32px 16px;
+      width: calc(100% - 16px * 2);
     }
   }
 
@@ -400,6 +401,11 @@
 
   & &__introductionChannelThumbnail {
     width: 68px;
+
+    @media screen and (max-width: 428px) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   & &__introductionChannelUpperText {
@@ -425,6 +431,10 @@
     margin-left: 8px;
     font-size: 20px;
     font-weight: bold;
+
+    @media screen and (max-width: 428px) {
+      font-size: 16px;
+    }
   }
 
   & &__introductionChannelResistor {
