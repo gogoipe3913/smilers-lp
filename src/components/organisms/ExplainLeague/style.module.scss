@@ -5,6 +5,7 @@
 .ExplainLeague {
   text-align: center;
   color: $global-color-white;
+  overflow-x: hidden;
 
   & &__upperColumn {
     padding: 120px 20% 0;
@@ -73,7 +74,31 @@
     }
   }
 
+  & &__lowerColumnBackground {
+    position: absolute;
+    width: 60%;
+    text-align: right;
+    z-index: 1;
+
+    @media screen and (max-width: 428px) {
+      width: 92%;
+    }
+  }
+
+  & &__lowerColumnBackgroundImage {
+    padding-top: 100px;
+    width: 50%;
+
+    @media screen and (max-width: 428px) {
+      padding-top: 140px;
+      padding-left: 40px;
+      width: 80%;
+    }
+  }
+
   & &__lowerColumnHeading {
+    position: relative;
+    z-index: 2;
     margin-top: 100px;
     text-align: left;
     font-size: 48px;
@@ -90,6 +115,8 @@
   }
 
   & &__separator {
+    position: relative;
+    z-index: 2;
     margin-top: 60px;
     width: 72px;
     height: 8px;
@@ -97,6 +124,8 @@
   }
 
   & &__lowerColumnExplain {
+    position: relative;
+    z-index: 2;
     text-align: left;
 
     @media screen and (max-width: 428px) {

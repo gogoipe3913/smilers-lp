@@ -5,6 +5,7 @@ import overviewList from "./data";
 // images
 import reelzLeagueSrc from "../../../images/explainLeague/reelzLeague.png";
 import spReelzLeagueSrc from "../../../images/explainLeague/spReelzLeague.png";
+import blackBallSrc from "../../../images/explainLeague/ballBlack.png";
 
 const ExplainLeague: FunctionComponent = () => {
   return (
@@ -33,6 +34,13 @@ const ExplainLeague: FunctionComponent = () => {
       </div>
 
       <div className={styles.ExplainLeague__lowerColumn}>
+        <div className={styles.ExplainLeague__lowerColumnBackground}>
+          <img
+            src={blackBallSrc}
+            alt="黒いサッカーボールの画像"
+            className={styles.ExplainLeague__lowerColumnBackgroundImage}
+          />
+        </div>
         <div className={styles.ExplainLeague__lowerColumnHeading}>
           <p className={styles.ExplainLeague__lowerColumnHeadingText}>
             YouTubeに
