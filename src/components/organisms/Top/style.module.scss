@@ -16,6 +16,7 @@
   color: $global-color-white;
   background-image: url("../../../images/top/background_new.png");
   background-size: cover;
+  animation: fadeIn 0.3s;
 
   @media screen and (max-width: 428px) {
     min-height: 660px;
@@ -24,6 +25,7 @@
 
   & &__heading {
     text-align: center;
+    animation: fadeIn 1s;
   }
 
   & &__headingSubTextBox {
@@ -70,6 +72,7 @@
   & &__message {
     font-size: 24px;
     letter-spacing: 0.1em;
+    animation: fadeIn 1s;
 
     @media screen and (max-width: 428px) {
       text-align: center;
@@ -79,6 +82,7 @@
 
   & &__messageEnglish {
     font-size: 14px;
+    animation: fadeIn 1s;
 
     @media screen and (max-width: 428px) {
       font-size: 12px;
@@ -98,6 +102,8 @@
     background-image: url("../../../images//top/textBackground.png");
     background-size: cover;
 
+    animation: fadeIn 1s;
+
     @media screen and (max-width: 428px) {
       display: none;
       font-size: 22px;
@@ -115,6 +121,8 @@
     background-image: url("../../../images//top/spTextBackground.png");
     background-size: cover;
 
+    animation: fadeIn 1s;
+
     @media screen and (min-width: 429px) {
       display: none;
     }
@@ -131,6 +139,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    animation: fadeIn 1s;
   }
 
   & &__scrollIndicatorText {
@@ -153,5 +163,14 @@
     @media screen and (max-width: 428px) {
       transform: translateX(-16px);
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

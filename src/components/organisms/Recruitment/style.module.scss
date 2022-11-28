@@ -102,6 +102,10 @@
     background-color: $global-color-green;
   }
 
+  & &__middleColumnExplains {
+    margin-top: 80px;
+  }
+
   & &__middleColumnExplain {
     font-size: 24px;
     font-weight: bold;

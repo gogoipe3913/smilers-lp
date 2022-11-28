@@ -6,12 +6,18 @@ import overviewList from "./data";
 import reelzLeagueSrc from "../../../images/explainLeague/reelzLeague.png";
 import spReelzLeagueSrc from "../../../images/explainLeague/spReelzLeague.png";
 import blackBallSrc from "../../../images/explainLeague/ballBlack.png";
+import classNames from "classnames";
 
 const ExplainLeague: FunctionComponent = () => {
   return (
     <div id="reelz" className={styles.ExplainLeague}>
       <div className={styles.ExplainLeague__upperColumn}>
-        <div className={styles.ExplainLeague__upperColumnHeading}>
+        <div
+          className={classNames(
+            styles.ExplainLeague__upperColumnHeading,
+            "Animation--fadeInRight"
+          )}
+        >
           <p className={styles.ExplainLeague__upperColumnText}>
             ReelZ LEAGUEとは
           </p>
@@ -19,7 +25,12 @@ const ExplainLeague: FunctionComponent = () => {
             What is "ReelZ LEAGUE"
           </p>
         </div>
-        <div className={styles.ExplainLeague__image}>
+        <div
+          className={classNames(
+            styles.ExplainLeague__image,
+            "Animation--fadeInRight"
+          )}
+        >
           <img
             src={reelzLeagueSrc}
             alt="新サッカーリーグ開幕画像"
@@ -41,7 +52,12 @@ const ExplainLeague: FunctionComponent = () => {
             className={styles.ExplainLeague__lowerColumnBackgroundImage}
           />
         </div>
-        <div className={styles.ExplainLeague__lowerColumnHeading}>
+        <div
+          className={classNames(
+            styles.ExplainLeague__lowerColumnHeading,
+            "Animation--fadeInLeft"
+          )}
+        >
           <p className={styles.ExplainLeague__lowerColumnHeadingText}>
             YouTubeに
           </p>
@@ -56,7 +72,12 @@ const ExplainLeague: FunctionComponent = () => {
         <p className={styles.ExplainLeague__lowerColumnExplain}>
           「サッカー×エンタメ」という新しい形で、日本サッカーを盛り上げていく。
         </p>
-        <ul className={styles.ExplainLeague__explainList}>
+        <ul
+          className={classNames(
+            styles.ExplainLeague__explainList,
+            "Animation--fadeInRight"
+          )}
+        >
           <li className={styles.ExplainLeague__explainItem}>
             <p className={styles.ExplainLeague__explainItemSubText}>
               リーグ戦全試合
@@ -74,7 +95,12 @@ const ExplainLeague: FunctionComponent = () => {
             <p className={styles.ExplainLeague__explainItemText}>前後半20分</p>
           </li>
         </ul>
-        <div className={styles.ExplainLeague__overview}>
+        <div
+          className={classNames(
+            styles.ExplainLeague__overview,
+            "Animation--fadeInBottom"
+          )}
+        >
           <p className={styles.ExplainLeague__overviewTitle}>大会概要</p>
           <p className={styles.ExplainLeague__overviewSubTitle}>ReelZ LEAGUE</p>
           <ul className={styles.ExplainLeague__overviewList}>

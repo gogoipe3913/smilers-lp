@@ -7,6 +7,7 @@ import recruitmentImageSrc from "../../../images/recruitment/recruitmentImage.pn
 import spRecruitmentImageSrc from "../../../images/recruitment/spRecruitmentImage.png";
 import arrowRightSmall from "../../../images/recruitment/arrowRightSmall.png";
 import arrowRight from "../../../images/recruitment/arrowRight.png";
+import classNames from "classnames";
 
 type TeamIntroductionChannelProps = {
   thumbnail: {
@@ -94,7 +95,9 @@ const TeamIntroductionChannel: FunctionComponent<
   </div>
 );
 
-const TeamIntroduction: FunctionComponent<TeamIntroductionProps> = ({
+const TeamIntroduction: FunctionComponent<
+  TeamIntroductionProps & { className?: string }
+> = ({
   index,
   id,
   title,
@@ -103,9 +106,10 @@ const TeamIntroduction: FunctionComponent<TeamIntroductionProps> = ({
   channels,
   allResistor,
   link,
+  className = "",
 }) => (
   <>
-    <div className={styles.Recruitment__introduction}>
+    <div className={classNames(styles.Recruitment__introduction, className)}>
       <p className={styles.Recruitment__introductionIndex}>{index}</p>
       <div className={styles.Recruitment__introductionTitle}>
         <p className={styles.Recruitment__introductionTitleSubText}>
@@ -214,11 +218,21 @@ const Recruitment: FunctionComponent = () => {
   return (
     <div id="recruitment" className={styles.Recruitment}>
       <div className={styles.Recruitment__upperColumn}>
-        <div className={styles.Recruitment__upperColumnHeading}>
+        <div
+          className={classNames(
+            styles.Recruitment__upperColumnHeading,
+            "Animation--fadeInRight"
+          )}
+        >
           <p className={styles.Recruitment__upperColumnText}>募集要項</p>
           <p className={styles.Recruitment__upperColumnSubText}>Recruitment</p>
         </div>
-        <div className={styles.Recruitment__image}>
+        <div
+          className={classNames(
+            styles.Recruitment__image,
+            "Animation--fadeInRight"
+          )}
+        >
           <img
             src={recruitmentImageSrc}
             alt="募集要項イメージ画像"
@@ -233,41 +247,63 @@ const Recruitment: FunctionComponent = () => {
       </div>
 
       <div className={styles.Recruitment__middleColumn}>
-        <p className={styles.Recruitment__middleColumnHeadingText}>
-          打倒、ライバルチーム
-        </p>
-        <p className={styles.Recruitment__middleColumnHeadingSubText}>
-          Beat The Rival Team
-        </p>
+        <div className="Animation--fadeInLeft">
+          <p className={styles.Recruitment__middleColumnHeadingText}>
+            打倒、ライバルチーム
+          </p>
+          <p className={styles.Recruitment__middleColumnHeadingSubText}>
+            Beat The Rival Team
+          </p>
+        </div>
 
         <div className={styles.Recruitment__separator} />
-        <p className={styles.Recruitment__middleColumnExplain}>
-          「人生を変えたい。」
-        </p>
-        <p className={styles.Recruitment__middleColumnExplain}>
-          「サッカーを通して、もっと知名度を上げたい。」
-        </p>
-        <p className={styles.Recruitment__middleColumnExplain}>
-          「芸人もサッカーも両方活躍したい。」
-        </p>
-        <p className={styles.Recruitment__middleColumnExplain}>
-          「有名YouTuberとコラボしたい。」
-        </p>
+        <div
+          className={classNames(
+            styles.Recruitment__middleColumnExplains,
+            "Animation--fadeInRight"
+          )}
+        >
+          <p className={styles.Recruitment__middleColumnExplain}>
+            「人生を変えたい。」
+          </p>
+          <p className={styles.Recruitment__middleColumnExplain}>
+            「サッカーを通して、もっと知名度を上げたい。」
+          </p>
+          <p className={styles.Recruitment__middleColumnExplain}>
+            「芸人もサッカーも両方活躍したい。」
+          </p>
+          <p className={styles.Recruitment__middleColumnExplain}>
+            「有名YouTuberとコラボしたい。」
+          </p>
+        </div>
 
-        <p className={styles.Recruitment__middleColumnMessage}>
-          まずは、そんな動機でも大丈夫！
-        </p>
-        <p className={styles.Recruitment__middleColumnMessage}>
-          共にSMILERSの一員として、チームを勝利へと導きましょう
-        </p>
+        <div
+          className={classNames(
+            styles.Recruitment__middleColumnExplains,
+            "Animation--fadeInLeft"
+          )}
+        >
+          <p className={styles.Recruitment__middleColumnMessage}>
+            まずは、そんな動機でも大丈夫！
+          </p>
+          <p className={styles.Recruitment__middleColumnMessage}>
+            共にSMILERSの一員として、チームを勝利へと導きましょう
+          </p>
+        </div>
       </div>
 
       <div className={styles.Recruitment__lowerColumn}>
         <p className={styles.Recruitment__lowerColumnTitle}>
           ライバルチーム紹介
         </p>
-        <TeamIntroduction {...winnersData} />
-        <TeamIntroduction {...revengersData} />
+        <TeamIntroduction
+          {...winnersData}
+          className="Animation--fadeInBottom"
+        />
+        <TeamIntroduction
+          {...revengersData}
+          className="Animation--fadeInBottom"
+        />
       </div>
     </div>
   );

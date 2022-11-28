@@ -9,12 +9,18 @@ import tamukenSmilersSrc from "../../../images/explainSmilers/tamuken-smilers.pn
 import okabeSrc from "../../../images/explainSmilers/okabe.png";
 import okabeExplainSrc from "../../../images/explainSmilers/okabe-explain.png";
 import arrowDownSrc from "../../../images/explainSmilers/arrowDown.png";
+import classNames from "classnames";
 
 const ExplainSmilers: FunctionComponent = () => {
   return (
     <div id="smilers" className={styles.ExplainSmilers}>
       <div className={styles.ExplainSmilers__upperColumn}>
-        <div className={styles.ExplainSmilers__upperColumnHeading}>
+        <div
+          className={classNames(
+            styles.ExplainSmilers__upperColumnHeading,
+            "Animation--fadeInLeft"
+          )}
+        >
           <p className={styles.ExplainSmilers__upperColumnText}>SMILERSとは</p>
           <p className={styles.ExplainSmilers__upperColumnSubText}>
             What is "SMILERS"

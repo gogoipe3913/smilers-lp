@@ -1,10 +1,11 @@
 import React, { FunctionComponent } from "react";
+import classNames from "classnames";
 import * as styles from "./style.module.scss";
 
 const Top: FunctionComponent = () => {
   return (
     <div className={styles.Top}>
-      <h1 className={styles.Top__heading}>
+      <h1 className={classNames(styles.Top__heading)}>
         <div className={styles.Top__headingSubTextBox}>
           <div className={styles.Top__separator} />
           <p className={styles.Top__headingSubText}>サッカー×エンタメ</p>
