@@ -3,8 +3,8 @@ import { ENTRY_BUTTON_URLS } from "../Header";
 import * as styles from "./style.module.scss";
 
 import HeaderLogoSrc from "../../../images/header/logo.png";
-import SupporterButtonSrc from "../../../images/spMenu/button1.png";
-import PlayerButtonSrc from "../../../images/spMenu/button2.png";
+import SupporterButtonSrc from "../../../images/selectionFlow/button1_new.png";
+import PlayerButtonSrc from "../../../images/selectionFlow/button2.png";
 import CloseButtonImageSrc from "../../../images/spMenu/closeButtonImage.png";
 
 type SpMenuProps = {

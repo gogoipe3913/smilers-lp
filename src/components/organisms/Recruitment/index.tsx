@@ -178,13 +178,16 @@ const TeamIntroduction: FunctionComponent<TeamIntroductionProps> = ({
           </ul>
         </div>
       </div>
+      <p className={styles.Recruitment__introductionChannelsTitle}>
+        チームメンバーの一部紹介
+      </p>
       <div className={styles.Recruitment__introductionChannels}>
         {channels.map((channel, index) => (
           <TeamIntroductionChannel key={index} {...channel} />
         ))}
       </div>
       <div className={styles.Recruitment__allResistor}>
-        <p>YouTube総登録者数</p>
+        <p>チームメンバー20人 YouTube総登録者数</p>
         <img
           src={arrowRight}
           alt="右矢印"

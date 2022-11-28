@@ -358,6 +358,11 @@
     }
   }
 
+  & &__introductionChannelsTitle {
+    margin-top: 48px;
+    font-size: 20px;
+  }
+
   & &__introductionChannels {
     display: flex;
     justify-content: center;
@@ -452,7 +457,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    font-size: 36px;
+    font-size: 24px;
 
     @media screen and (max-width: 428px) {
       font-size: 18px;

@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
 import * as styles from "./style.module.scss";
 import HeaderLogoSrc from "../../../images/header/logo.png";
-import SupporterButtonSrc from "../../../images/header/supporterButton.png";
-import PlayerButtonSrc from "../../../images/header/playerButton.png";
+import SupporterButtonSrc from "../../../images/selectionFlow/button1_new.png";
+import PlayerButtonSrc from "../../../images/selectionFlow/button2.png";
 import HumbergerSrc from "../../../images/header/spHumberger.png";
 import SpMenu from "../SpMenu";
 

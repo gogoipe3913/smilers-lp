@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import * as styles from "./style.module.scss";
 // images
 import arrowDownSrc from "../../../images/selectionFlow/arrowDown.png";
-import Button1 from "../../../images/selectionFlow/button1.png";
+import Button1 from "../../../images/selectionFlow/button1_new.png";
 import Button2 from "../../../images/selectionFlow/button2.png";
 import { ENTRY_BUTTON_URLS } from "../Header";
 
@@ -29,7 +29,17 @@ const SelectionFlow: FunctionComponent = () => {
           </li>
           <li className={styles.SelectionFlow__flowItem}>
             <p className={styles.SelectionFlow__flowItemText}>
-              【12/8】1~5次選考
+              【12/8】1~2次選考
+            </p>
+            <img
+              src={arrowDownSrc}
+              alt="下矢印"
+              className={styles.SelectionFlow__flowItemArrowDown}
+            />
+          </li>
+          <li className={styles.SelectionFlow__flowItem}>
+            <p className={styles.SelectionFlow__flowItemText}>
+              【未定】3~5次選考
             </p>
           </li>
         </ul>
