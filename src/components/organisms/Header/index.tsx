@@ -29,7 +29,7 @@ const Header: FunctionComponent = () => {
         <div className={styles.Header__rightColumn}>
           <ul className={styles.Header__navigation}>
             <li className={styles.Header__navigationLink}>
-              <a href="#reelz">Reelz LEAGUE</a>
+              <a href="#reelz">ReelZ LEAGUE</a>
             </li>
             <li className={styles.Header__navigationLink}>
               <a href="#smilers">SMILERS</a>
