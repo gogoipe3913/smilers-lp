@@ -6,6 +6,10 @@ $global-color-gray-2: #888;
 $global-color-purple: #54479b;
 $global-color-green: #499b70;
 
+// z-index
+$global-elevation-1: 100000;
+$global-elevation-2: 200000;
+
 $spacer: 1rem !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default

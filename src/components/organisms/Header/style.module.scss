@@ -3,12 +3,16 @@
 @import "../../../styles/mixins";
 
 .Header {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  width: calc(100% - 24px * 2);
   height: 60px;
   background-color: $global-color-white;
+  z-index: $global-elevation-1;
 
   & &__logo {
     width: 120px;
@@ -30,7 +34,7 @@
   }
 
   & &__navigationLink + &__navigationLink {
-    margin-left: 16px;
+    margin-left: 32px;
   }
 
   & &__navigation + &__entryButtons {
