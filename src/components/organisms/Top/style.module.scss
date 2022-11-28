@@ -14,11 +14,11 @@
   max-height: 1200px;
   // TODO: 後で消す
   color: $global-color-white;
-  background-image: url("../../../images/top/background.png");
+  background-image: url("../../../images/top/background_new.png");
   background-size: cover;
 
   @media screen and (max-width: 428px) {
-    background-image: url("../../../images/top/spBackground.png");
+    background-image: url("../../../images/top/spBackground_new.png");
   }
 
   & &__heading {
