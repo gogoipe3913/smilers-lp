@@ -191,7 +191,11 @@ const TeamIntroduction: FunctionComponent<
         ))}
       </div>
       <div className={styles.Recruitment__allResistor}>
-        <p>チームメンバー20人 YouTube総登録者数</p>
+        <p className={styles.Recruitment__allResistorText}>
+          チームメンバー20人
+          <br />
+          YouTube総登録者数
+        </p>
         <img
           src={arrowRight}
           alt="右矢印"

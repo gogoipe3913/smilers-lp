@@ -1,3 +1,28 @@
+@mixin text-overflow($clamp: 1, $line-height: 1.2) {
+  // 1行
+  @if $clamp == 1 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  // 複数行
+  @else {
+    // -webkit-boxなどが効かない場合は単純なoverflow:hiddenで消えるようにする
+    display: block;
+    display: -webkit-box;
+    max-height: $line-height * $clamp * 1em;
+    overflow: hidden;
+    line-height: $line-height;
+
+    // autoprefixer@^9.6.1ではignoreコメントは不要だが
+    // atumを使用している面で古いバージョンのautoprefixerを使用している可能性もあるため、
+    // 念の為ignoreコメントをつけておく
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $clamp;
+  }
+}
+
 @mixin centering() {
   display: flex;
   align-items: center;
@@ -6,9 +31,9 @@
 }
 
 $breakpoints: (
-        'md': '768px',
-        'lg': '992px',
-        'xl': '1440px',
+  "md": "768px",
+  "lg": "992px",
+  "xl": "1440px",
 ) !default;
 @mixin min-width($breakpoint: md) {
   @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
@@ -21,7 +46,14 @@ $breakpoints: (
   }
 }
 
-@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+@mixin button-variant(
+  $background,
+  $border,
+  $hover-background: darken($background, 7.5%),
+  $hover-border: darken($border, 10%),
+  $active-background: darken($background, 10%),
+  $active-border: darken($border, 12.5%)
+) {
   color: $background;
   border-color: $border;
 
@@ -34,7 +66,8 @@ $breakpoints: (
   &.focus {
     color: $hover-background;
     border-color: $hover-border;
-    box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix($background, $border, 15%), .5);
+    box-shadow: $btn-box-shadow,
+      0 0 0 $btn-focus-width rgba(mix($background, $border, 15%), 0.5);
   }
 
   // Disabled comes first so active can properly restyle
@@ -54,7 +87,8 @@ $breakpoints: (
 
     &:focus {
       // box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix($background, $border, 15%), .5);
-      box-shadow: 0 0 0 $btn-focus-width rgba(mix($background, $border, 15%), .5);
+      box-shadow: 0 0 0 $btn-focus-width
+        rgba(mix($background, $border, 15%), 0.5);
     }
   }
 }

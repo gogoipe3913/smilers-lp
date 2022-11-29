@@ -4,11 +4,17 @@ import * as styles from "./style.module.scss";
 import recruitmentOverviewData from "./data";
 // images
 import RecruitmentOverviewSrc from "../../../images/recruitmentOverview/main.png";
+import classNames from "classnames";
 
 const RecruitmentOverview: FunctionComponent = () => {
   return (
     <div className={styles.RecruitmentOverview}>
-      <div className={styles.RecruitmentOverview__overview}>
+      <div
+        className={classNames(
+          styles.RecruitmentOverview__overview,
+          "Animation--fadeInBottom"
+        )}
+      >
         <img
           src={RecruitmentOverviewSrc}
           alt="応募概要のイメージ画像"

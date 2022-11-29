@@ -7,12 +7,20 @@
   color: $global-color-white;
 
   & &__upperColumn {
-    padding: 120px 20% 0;
+    padding: 120px 16% 0;
+
+    @media screen and (min-width: 429px) and (max-width: 1000px) {
+      padding: 120px 160px 0px;
+    }
+
+    @media screen and (min-width: 429px) {
+      min-width: calc(1000px - 160px * 2);
+    }
   }
 
   & &__upperColumnText {
     font-size: 60px;
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: 0.08em;
 
     @media screen and (max-width: 428px) {
@@ -34,9 +42,17 @@
   }
 
   & &__lowerColumn {
-    padding: 60px 20% 120px;
+    padding: 60px 16% 120px;
     font-size: 28px;
     font-weight: bold;
+
+    @media screen and (max-width: 1000px) {
+      padding: 60px 160px 120px;
+    }
+
+    @media screen and (min-width: 429px) {
+      min-width: calc(1000px - 160px * 2);
+    }
 
     @media screen and (max-width: 428px) {
       padding: 60px 4% 120px;

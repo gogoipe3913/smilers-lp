@@ -3,9 +3,17 @@
 @import "../../../styles/mixins";
 
 .RecruitmentOverview {
-  padding: 120px 20% 80px;
+  padding: 120px 16% 80px;
   text-align: center;
   background-color: $global-color-gray-1;
+
+  @media screen and (max-width: 1000px) {
+    padding: 120px 160px 0px;
+  }
+
+  @media screen and (min-width: 429px) {
+    min-width: calc(1000px - 160px * 2);
+  }
 
   @media screen and (max-width: 428px) {
     padding: 120px 4% 80px;
@@ -16,6 +24,10 @@
     color: $global-color-black;
     background-color: $global-color-white;
     border-radius: 16px;
+
+    @media screen and (min-width: 429px) and (max-width: 1160px) {
+      padding: 80px 60px;
+    }
 
     @media screen and (max-width: 428px) {
       padding: 60px 16px;

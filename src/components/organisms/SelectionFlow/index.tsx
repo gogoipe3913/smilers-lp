@@ -5,12 +5,18 @@ import arrowDownSrc from "../../../images/selectionFlow/arrowDown.png";
 import Button1 from "../../../images/selectionFlow/button1_new.png";
 import Button2 from "../../../images/selectionFlow/button2.png";
 import { ENTRY_BUTTON_URLS } from "../Header";
+import classNames from "classnames";
 
 const SelectionFlow: FunctionComponent = () => {
   return (
     <div className={styles.SelectionFlow}>
       <div className={styles.SelectionFlow__upperColumn}>
-        <div className={styles.SelectionFlow__upperColumnHeading}>
+        <div
+          className={classNames(
+            styles.SelectionFlow__upperColumnHeading,
+            "Animation--fadeInLeft"
+          )}
+        >
           <p className={styles.SelectionFlow__upperColumnText}>選考の流れ</p>
           <p className={styles.SelectionFlow__upperColumnSubText}>
             Selection Flow

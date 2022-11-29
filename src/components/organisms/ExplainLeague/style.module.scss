@@ -8,9 +8,17 @@
   overflow-x: hidden;
 
   & &__upperColumn {
-    padding: 120px 20% 0;
+    padding: 120px 16% 0;
     height: 400px;
     background-color: $global-color-purple;
+
+    @media screen and (max-width: 1000px) {
+      padding: 120px 160px 0;
+    }
+
+    @media screen and (min-width: 429px) {
+      min-width: calc(1000px - 160px * 2);
+    }
 
     @media screen and (max-width: 428px) {
       padding: 100px 4% 0;
@@ -67,7 +75,15 @@
   // lower column
   & &__lowerColumn {
     // padding-topは目視で確認して調整
-    padding: 200px 20% 120px;
+    padding: 200px 16% 120px;
+
+    @media screen and (max-width: 1000px) {
+      padding: 200px 160px 120px;
+    }
+
+    @media screen and (min-width: 429px) {
+      min-width: calc(1000px - 160px * 2);
+    }
 
     @media screen and (max-width: 428px) {
       padding: 40px 4% 120px;
@@ -142,6 +158,8 @@
   }
 
   & &__explainList {
+    position: relative;
+    z-index: 2;
     margin-top: 100px;
     width: 100%;
     display: flex;
@@ -163,6 +181,10 @@
     border-radius: 16px;
     background-color: $global-color-gray-1;
 
+    @media screen and (min-width: 429px) and (max-width: 1200px) {
+      height: 160px;
+    }
+
     @media screen and (max-width: 428px) {
       width: 100%;
     }
@@ -178,12 +200,22 @@
   }
 
   & &__explainItemSubText {
-    font-size: 28px;
+    font-size: 24px;
+
+    // 429 < 画面幅 < 1200 の場合
+    @media screen and (max-width: 1200px) and (min-width: 429px) {
+      font-size: 20px;
+    }
   }
 
   & &__explainItemText {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
+
+    // 429 < 画面幅 < 1200 の場合
+    @media screen and (max-width: 1200px) and (min-width: 429px) {
+      font-size: 28px;
+    }
   }
 
   & &__explainItemSubText + &__explainItemText {

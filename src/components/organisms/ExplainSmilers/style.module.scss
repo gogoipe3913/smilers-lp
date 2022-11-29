@@ -7,10 +7,18 @@
   color: $global-color-white;
 
   & &__upperColumn {
-    padding: 120px 20% 0;
+    padding: 120px 16% 0;
     height: 480px;
     background-image: url("../../../images/explainSmilers/upperBackground.png");
     background-size: cover;
+
+    @media screen and (max-width: 1000px) {
+      padding: 120px 160px 0;
+    }
+
+    @media screen and (min-width: 429px) {
+      min-width: calc(1000px - 160px * 2);
+    }
 
     @media screen and (max-width: 428px) {
       padding: 120px 4% 0;
@@ -21,7 +29,7 @@
 
   & &__upperColumnText {
     font-size: 60px;
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: 0.08em;
 
     @media screen and (max-width: 428px) {
@@ -45,7 +53,15 @@
   // lower column
   & &__lowerColumn {
     // padding-topは目視で確認して調整
-    padding: 0 20% 120px;
+    padding: 0 16% 120px;
+
+    @media screen and (max-width: 1000px) {
+      padding: 0 160px 120px;
+    }
+
+    @media screen and (min-width: 429px) {
+      min-width: calc(1000px - 160px * 2);
+    }
 
     @media screen and (max-width: 428px) {
       padding: 0 4% 60px;
@@ -73,7 +89,6 @@
   & &__explainSupervisorImage {
     margin-top: -180px;
     width: 340px;
-    border: 12px solid $global-color-white;
     border-radius: 50%;
 
     @media screen and (max-width: 428px) {
@@ -101,6 +116,10 @@
     width: 72px;
     height: 8px;
     background-color: $global-color-green;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 28px;
+    }
   }
 
   & &__explainSupervisorExplain {
@@ -113,6 +132,10 @@
 
   & &__separator + &__explainSupervisorExplain {
     margin-top: 60px;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 28px;
+    }
   }
 
   & &__explainSupervisorExplainText {
@@ -143,7 +166,12 @@
   }
 
   & &__profile {
+    padding: 0 76px;
     color: $global-color-black;
+
+    @media screen and (max-width: 428px) {
+      padding: 0 5%;
+    }
   }
 
   & &__smilersImage + &__profile {
@@ -177,10 +205,10 @@
   }
 
   & &__profileList {
-    padding: 40px 100px 80px;
+    padding: 40px 0 80px;
 
     @media screen and (max-width: 428px) {
-      padding: 20px 5% 20px;
+      padding: 20px 0 20px;
     }
   }
 
@@ -223,6 +251,10 @@
   & &__explainCoacher {
     margin-top: 60px;
     color: $global-color-black;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 28px;
+    }
   }
 
   & &__explainCoacherText {

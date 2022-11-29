@@ -4,12 +4,14 @@ import * as styles from "./style.module.scss";
 import { supervisorData, coacherData } from "./data";
 // images
 import tamukenSrc from "../../../images/explainSmilers/tamuken.png";
-import tamukenExplainSrc from "../../../images/explainSmilers/tamuken-explain.png";
+import tamukenExplainSrc from "../../../images/explainSmilers/tamukenExplain.png";
 import tamukenSmilersSrc from "../../../images/explainSmilers/tamuken-smilers.png";
 import okabeSrc from "../../../images/explainSmilers/okabe.png";
-import okabeExplainSrc from "../../../images/explainSmilers/okabe-explain.png";
+import okabeExplainSrc from "../../../images/explainSmilers/okabeExplain.png";
 import arrowDownSrc from "../../../images/explainSmilers/arrowDown.png";
 import classNames from "classnames";
+
+const SERVER_HOST = "https://smilers-group.com/";
 
 const ExplainSmilers: FunctionComponent = () => {
   return (
@@ -29,7 +31,12 @@ const ExplainSmilers: FunctionComponent = () => {
       </div>
 
       <div className={styles.ExplainSmilers__lowerColumn}>
-        <div className={styles.ExplainSmilers__explainSupervisor}>
+        <div
+          className={classNames(
+            styles.ExplainSmilers__explainSupervisor,
+            "Animation--fadeInBottom"
+          )}
+        >
           <img
             src={tamukenSrc}
             alt="たむけん顔写真"
@@ -88,7 +95,12 @@ const ExplainSmilers: FunctionComponent = () => {
           </div>
         </div>
 
-        <div className={styles.ExplainSmilers__explainSupervisor}>
+        <div
+          className={classNames(
+            styles.ExplainSmilers__explainSupervisor,
+            "Animation--fadeInBottom"
+          )}
+        >
           <img
             src={okabeSrc}
             alt="岡部将和顔写真"
@@ -112,22 +124,22 @@ const ExplainSmilers: FunctionComponent = () => {
               className={styles.ExplainSmilers__explainCoacherArrowDown}
             />
             <div className={styles.ExplainSmilers__explainCoacherMovie}>
-              <iframe
+              <video
                 width="80%"
                 height="500"
-                src="https://www.youtube.com/embed/SHpFOknZ9dk?start=35"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+                playsInline={true}
+                controls={true}
+                src={`${SERVER_HOST}/movie/okabeMovie.mp4`}
+              />
             </div>
             <div className={styles.ExplainSmilers__explainCoacherMovieSp}>
-              <iframe
+              <video
                 width="300"
                 height="200"
-                src="https://www.youtube.com/embed/SHpFOknZ9dk?start=35"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+                playsInline={true}
+                controls={true}
+                src={`${SERVER_HOST}/movie/okabeMovie.mp4`}
+              />
             </div>
           </div>
           <div className={styles.ExplainSmilers__profile}>
