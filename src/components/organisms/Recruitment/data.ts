@@ -15,7 +15,7 @@ import { TeamIntroductionProps } from ".";
 
 export const winnersData: TeamIntroductionProps = {
   index: "01",
-  id: "winners",
+  id: "eFootball",
   title: {
     subText: "YouTube最強軍団",
     text: "WINNER'S",
@@ -94,7 +94,7 @@ export const winnersData: TeamIntroductionProps = {
 
 export const revengersData: TeamIntroductionProps = {
   index: "02",
-  id: "revengers",
+  id: "REVENGER'S",
   title: {
     subText: "WINNER'S最大のライバル",
     text: "REVENGER'S",
@@ -149,10 +149,10 @@ export const revengersData: TeamIntroductionProps = {
     {
       thumbnail: {
         url: SorathiThumb,
-        alt: "そらてぃのサムネイル",
+        alt: "そらちぃのサムネイル",
       },
 
-      name: "そらてぃ",
+      name: "そらちぃ",
       resistor: "136万人",
       link: "https://www.youtube.com/@avntisdouga",
     },

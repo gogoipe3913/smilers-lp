@@ -495,7 +495,6 @@
   }
 
   & &__introductionChannelName {
-    margin-left: 8px;
     font-size: 20px;
     font-weight: bold;
 
@@ -506,6 +505,10 @@
     @media screen and (max-width: 428px) {
       font-size: 16px;
     }
+  }
+
+  & &__introductionChannelPosition + &__introductionChannelName {
+    margin-left: 8px;
   }
 
   & &__introductionChannelResistor {

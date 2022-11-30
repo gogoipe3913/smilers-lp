@@ -213,7 +213,7 @@ const TeamIntroduction: FunctionComponent<
       <a
         href={link.url}
         className={styles.Recruitment__channelLinkBody}
-      >{`${title.text}チャンネル`}</a>
+      >{`${id}チャンネル`}</a>
     </div>
   </>
 );

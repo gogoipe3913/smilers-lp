@@ -32,6 +32,8 @@
     letter-spacing: 0.08em;
 
     @media screen and (max-width: 428px) {
+      margin: 0 auto;
+      width: fit-content;
       font-size: 32px;
       font-weight: bold;
     }
@@ -122,7 +124,7 @@
     letter-spacing: 0.08em;
 
     @media screen and (max-width: 428px) {
-      font-size: 32px;
+      font-size: 30px;
     }
   }
 

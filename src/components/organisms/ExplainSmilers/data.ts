@@ -10,7 +10,7 @@ export const supervisorData = [
   {
     title: "サッカー経歴",
     contents: [
-      "・GANBA TV 「青と黒」のMCを12年間",
+      "・GANBA TV 「青と黒」のMCを10年以上",
       "・フットサル大会 たむけんCUPを主催",
       "・サッカーの4級審判員の資格取得",
     ],
