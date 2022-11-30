@@ -10,6 +10,7 @@ import okabeSrc from "../../../images/explainSmilers/okabe.png";
 import okabeExplainSrc from "../../../images/explainSmilers/okabeExplain.png";
 import arrowDownSrc from "../../../images/explainSmilers/arrowDown.png";
 import classNames from "classnames";
+import { getHasBulletPoints } from "../../../utils/getHasBulletPoints";
 
 const SERVER_HOST = "https://smilers-group.com/";
 
@@ -83,7 +84,12 @@ const ExplainSmilers: FunctionComponent = () => {
                     {item.contents.map((content, contentIndex) => (
                       <p
                         key={contentIndex}
-                        className={styles.ExplainSmilers__profileItemContent}
+                        className={classNames(
+                          styles.ExplainSmilers__profileItemContent,
+                          getHasBulletPoints(content)
+                            ? styles.ExplainSmilers__profileItemContent__indented
+                            : ""
+                        )}
                       >
                         {content}
                       </p>
@@ -161,7 +167,12 @@ const ExplainSmilers: FunctionComponent = () => {
                     {item.contents.map((content, contentIndex) => (
                       <p
                         key={contentIndex}
-                        className={styles.ExplainSmilers__profileItemContent}
+                        className={classNames(
+                          styles.ExplainSmilers__profileItemContent,
+                          getHasBulletPoints(content)
+                            ? styles.ExplainSmilers__profileItemContent__indented
+                            : ""
+                        )}
                       >
                         {content}
                       </p>

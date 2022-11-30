@@ -5,6 +5,7 @@ import recruitmentOverviewData from "./data";
 // images
 import RecruitmentOverviewSrc from "../../../images/recruitmentOverview/main.png";
 import classNames from "classnames";
+import { getHasBulletPoints } from "../../../utils/getHasBulletPoints";
 
 const RecruitmentOverview: FunctionComponent = () => {
   return (
@@ -42,7 +43,12 @@ const RecruitmentOverview: FunctionComponent = () => {
                 {item.contents.map((content, contentIndex) => (
                   <p
                     key={contentIndex}
-                    className={styles.RecruitmentOverview__overviewItemContent}
+                    className={classNames(
+                      styles.RecruitmentOverview__overviewItemContent,
+                      getHasBulletPoints(content)
+                        ? styles.RecruitmentOverview__overviewItemContent__indented
+                        : ""
+                    )}
                   >
                     {content}
                   </p>

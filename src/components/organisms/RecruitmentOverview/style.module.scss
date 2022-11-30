@@ -110,6 +110,11 @@
 
   & &__overviewItemContent {
     line-height: 1.6;
+
+    &__indented {
+      padding-left: 1em;
+      text-indent: -1em;
+    }
   }
 
   & &__overviewItemContent + &__overviewItemContent {

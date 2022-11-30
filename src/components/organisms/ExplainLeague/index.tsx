@@ -7,6 +7,7 @@ import reelzLeagueSrc from "../../../images/explainLeague/reelzLeague.png";
 import spReelzLeagueSrc from "../../../images/explainLeague/spReelzLeague.png";
 import blackBallSrc from "../../../images/explainLeague/ballBlack.png";
 import classNames from "classnames";
+import { getHasBulletPoints } from "../../../utils/getHasBulletPoints";
 
 const ExplainLeague: FunctionComponent = () => {
   return (
@@ -113,7 +114,12 @@ const ExplainLeague: FunctionComponent = () => {
                   {item.contents.map((content, contentIndex) => (
                     <p
                       key={contentIndex}
-                      className={styles.ExplainLeague__overviewItemContent}
+                      className={classNames(
+                        styles.ExplainLeague__overviewItemContent,
+                        getHasBulletPoints(content)
+                          ? styles.ExplainLeague__overviewItemContent__indented
+                          : ""
+                      )}
                     >
                       {content}
                     </p>
