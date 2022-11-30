@@ -164,8 +164,10 @@
     height: 100px;
     background-color: $global-color-white;
 
+    animation: pathMove 2s cubic-bezier(1, 0, 0, 1) infinite;
+
     @media screen and (max-width: 428px) {
-      transform: translateX(-16px);
+      animation: pathMoveSp 2s cubic-bezier(1, 0, 0, 1) infinite;
     }
   }
 }
@@ -188,5 +190,43 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes pathMove {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+
+@keyframes pathMoveSp {
+  0% {
+    transform: scale(1, 0) translateX(-16px);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1) translateX(-16px);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1) translateX(-16px);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0) translateX(-16px);
+    transform-origin: 0 100%;
   }
 }

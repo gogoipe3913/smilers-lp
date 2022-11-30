@@ -278,7 +278,7 @@
   }
 
   & &__explainCoacherSubText + &__explainCoacherArrowDown {
-    margin-top: 12px;
+    margin-top: 16px;
   }
 
   & &__explainCoacherMovie {
@@ -290,7 +290,7 @@
   }
 
   & &__explainCoacherMovieSp {
-    margin: 40px auto 80px;
+    margin: 40px auto 40px;
 
     @media screen and (min-width: 429px) {
       display: none;

@@ -10,6 +10,7 @@ import Recruitment from "../organisms/Recruitment";
 import RecruitmentOverview from "../organisms/RecruitmentOverview";
 import SelectionFlow from "../organisms/SelectionFlow";
 import Footer from "../organisms/Footer";
+import OverviewMovie from "../organisms/OverviewMovie";
 
 const LpTemplate: FunctionComponent = () => {
   useEffect(() => {
@@ -98,6 +99,7 @@ const LpTemplate: FunctionComponent = () => {
       <Top />
       <ExplainLeague />
       <ExplainSmilers />
+      <OverviewMovie isDisplayed={false} />
       <Recruitment />
       <RecruitmentOverview />
       <SelectionFlow />

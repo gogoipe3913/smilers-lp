@@ -24,7 +24,12 @@ const SelectionFlow: FunctionComponent = () => {
         </div>
       </div>
       <div className={styles.SelectionFlow__lowerColumn}>
-        <ul className={styles.SelectionFlow__flowList}>
+        <ul
+          className={classNames(
+            styles.SelectionFlow__flowList,
+            "Animation--fadeInRight"
+          )}
+        >
           <li className={styles.SelectionFlow__flowItem}>
             <p className={styles.SelectionFlow__flowItemText}>書類選考</p>
             <img

@@ -106,5 +106,10 @@
 
   & &__buttonImage {
     width: 100%;
+    transition-duration: 0.4s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }

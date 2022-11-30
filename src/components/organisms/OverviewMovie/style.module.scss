@@ -1,0 +1,48 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.OverviewMovie {
+  padding: 0 16% 120px;
+  color: $global-color-white;
+  text-align: center;
+
+  @media screen and (max-width: 1000px) {
+    padding: 0 160px 120px;
+  }
+
+  @media screen and (min-width: 429px) {
+    min-width: calc(1000px - 160px * 2);
+  }
+
+  @media screen and (max-width: 428px) {
+    padding: 0px 4% 80px;
+  }
+
+  & &__titleText {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  & &__titleSubText {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  & &__titleText + &__titleSubText {
+    margin-top: 12px;
+  }
+
+  & &__titleSubText + &__titleArrowDown {
+    margin-top: 16px;
+  }
+
+  & &__title + &__video {
+    margin-top: 80px;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 40px;
+    }
+  }
+}

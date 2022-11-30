@@ -141,7 +141,7 @@ const ExplainSmilers: FunctionComponent = () => {
             <div className={styles.ExplainSmilers__explainCoacherMovieSp}>
               <video
                 width="300"
-                height="200"
+                height="172"
                 playsInline={true}
                 controls={true}
                 src={`${SERVER_HOST}/movie/okabeMovie.mp4`}
