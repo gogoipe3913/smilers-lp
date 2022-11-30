@@ -31,7 +31,7 @@ const SpMenu: FunctionComponent<SpMenuProps> = ({
       <ul className={styles.SpMenu__navigation}>
         <li className={styles.SpMenu__navigationLink}>
           <a href="#reelz" onClick={closeSpMenu}>
-            Reelz LEAGUE
+            ReelZ LEAGUE
           </a>
         </li>
         <li className={styles.SpMenu__navigationLink}>
