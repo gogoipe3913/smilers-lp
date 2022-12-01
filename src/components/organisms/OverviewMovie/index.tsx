@@ -12,7 +12,7 @@ const OverviewMovie: FunctionComponent<OverviewMovieProps> = ({
   isDisplayed = false,
 }) => {
   let iframe: Element | null = {} as Element;
-  if (typeof document !== `undefined`) {
+  if (typeof document !== "undefined") {
     iframe = document.querySelector("#OverviewMovie");
   }
   const iframeWidth = iframe ? iframe.clientWidth : 0;
@@ -21,6 +21,10 @@ const OverviewMovie: FunctionComponent<OverviewMovieProps> = ({
   );
 
   useEffect(() => {
+    const iframe = document.querySelector("#OverviewMovie");
+    const iframeWidth = iframe ? iframe.clientWidth : 500;
+    setIframeHeight(iframeWidth * 0.5625);
+
     if (typeof window !== "undefined") {
       window.addEventListener("resize", () => {
         const iframe = document.querySelector("#OverviewMovie");
