@@ -11,7 +11,10 @@ type OverviewMovieProps = {
 const OverviewMovie: FunctionComponent<OverviewMovieProps> = ({
   isDisplayed = false,
 }) => {
-  const iframe = document.querySelector("#OverviewMovie");
+  let iframe: Element | null = {} as Element;
+  if (typeof document !== `undefined`) {
+    iframe = document.querySelector("#OverviewMovie");
+  }
   const iframeWidth = iframe ? iframe.clientWidth : 0;
   const [iframeHeight, setIframeHeight] = useState<number>(
     iframeWidth * 0.5625
