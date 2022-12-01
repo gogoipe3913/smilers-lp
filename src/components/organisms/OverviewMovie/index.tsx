@@ -1,10 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 import * as styles from "./style.module.scss";
 // images
 import arrowDownSrc from "../../../images/explainSmilers/arrowDown.png";
 import classNames from "classnames";
-
-const SERVER_HOST = "https://smilers-group.com/";
 
 type OverviewMovieProps = {
   isDisplayed?: boolean;
@@ -13,6 +11,22 @@ type OverviewMovieProps = {
 const OverviewMovie: FunctionComponent<OverviewMovieProps> = ({
   isDisplayed = false,
 }) => {
+  const iframe = document.querySelector("#OverviewMovie");
+  const iframeWidth = iframe ? iframe.clientWidth : 0;
+  const [iframeHeight, setIframeHeight] = useState<number>(
+    iframeWidth * 0.5625
+  );
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", () => {
+        const iframe = document.querySelector("#OverviewMovie");
+        const iframeWidth = iframe ? iframe.clientWidth : 500;
+        setIframeHeight(iframeWidth * 0.5625);
+      });
+    }
+  }, []);
+
   return isDisplayed ? (
     <div className={styles.OverviewMovie}>
       <div
@@ -37,11 +51,15 @@ const OverviewMovie: FunctionComponent<OverviewMovieProps> = ({
           "Animation--fadeInRight"
         )}
       >
-        <video
+        <iframe
+          id="OverviewMovie"
           width="100%"
-          playsInline={true}
-          controls={true}
-          src={`${SERVER_HOST}/movie/okabeMovie.mp4`}
+          height={iframeHeight}
+          className=""
+          src="https://www.youtube.com/embed/l02Pzl97fIk"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         />
       </div>
     </div>

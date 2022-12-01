@@ -99,7 +99,7 @@ const LpTemplate: FunctionComponent = () => {
       <Top />
       <ExplainLeague />
       <ExplainSmilers />
-      <OverviewMovie isDisplayed={false} />
+      <OverviewMovie isDisplayed={true} />
       <Recruitment />
       <RecruitmentOverview />
       <SelectionFlow />
