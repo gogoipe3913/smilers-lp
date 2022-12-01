@@ -11,29 +11,6 @@ type OverviewMovieProps = {
 const OverviewMovie: FunctionComponent<OverviewMovieProps> = ({
   isDisplayed = false,
 }) => {
-  let iframe: Element | null = {} as Element;
-  if (typeof document !== "undefined") {
-    iframe = document.querySelector("#OverviewMovie");
-  }
-  const iframeWidth = iframe ? iframe.clientWidth : 0;
-  const [iframeHeight, setIframeHeight] = useState<number>(
-    iframeWidth * 0.5625
-  );
-
-  useEffect(() => {
-    const iframe = document.querySelector("#OverviewMovie");
-    const iframeWidth = iframe ? iframe.clientWidth : 500;
-    setIframeHeight(iframeWidth * 0.5625);
-
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", () => {
-        const iframe = document.querySelector("#OverviewMovie");
-        const iframeWidth = iframe ? iframe.clientWidth : 500;
-        setIframeHeight(iframeWidth * 0.5625);
-      });
-    }
-  }, []);
-
   return isDisplayed ? (
     <div className={styles.OverviewMovie}>
       <div
@@ -61,8 +38,7 @@ const OverviewMovie: FunctionComponent<OverviewMovieProps> = ({
         <iframe
           id="OverviewMovie"
           width="100%"
-          height={iframeHeight}
-          className=""
+          style={{ aspectRatio: "1.777777778" }}
           src="https://www.youtube.com/embed/l02Pzl97fIk"
           title="YouTube video player"
           frameBorder="0"
