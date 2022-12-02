@@ -11,15 +11,19 @@ const Loading: FunctionComponent<LoadingProps> = ({
   setIsDisplayedTopView = () => {},
   className = "",
 }) => {
+  const [isRender, setIsRender] = useState(true);
   const [isDisplayed, setIsDisplayed] = useState(true);
   const [progressNumber, setProgressNumber] = useState(0);
-  let timerId;
 
   useEffect(() => {
     setTimeout(() => {
       setIsDisplayedTopView();
       setIsDisplayed(false);
     }, 5000);
+
+    setTimeout(() => {
+      setIsRender(false);
+    }, 5600);
 
     setTimeout(() => {
       setProgressNumber(progressNumber + 1);
@@ -38,7 +42,7 @@ const Loading: FunctionComponent<LoadingProps> = ({
     }
   }, [progressNumber]);
 
-  return (
+  return isRender ? (
     <div
       className={classNames(
         styles.Loading,
@@ -53,7 +57,7 @@ const Loading: FunctionComponent<LoadingProps> = ({
         <div className={styles.Loading__progressBarColored} />
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Loading;
