@@ -11,6 +11,7 @@ import RecruitmentOverview from "../organisms/RecruitmentOverview";
 import SelectionFlow from "../organisms/SelectionFlow";
 import Footer from "../organisms/Footer";
 import OverviewMovie from "../organisms/OverviewMovie";
+import SEO from "../organisms/SEO";
 
 const LpTemplate: FunctionComponent = () => {
   useEffect(() => {
@@ -95,6 +96,7 @@ const LpTemplate: FunctionComponent = () => {
 
   return (
     <div className={styles.LpTemplate}>
+      <SEO />
       <Header />
       <Top />
       <ExplainLeague />
