@@ -13,10 +13,14 @@ export const ENTRY_BUTTON_URLS = {
     "https://docs.google.com/forms/d/e/1FAIpQLSdyb0W1Vv-77CSGRHgpms5RfU2nJM7kz_S3GPa0X8UngclMbA/viewform",
 };
 
-const Header: FunctionComponent = () => {
-  const [isDisplayed, setIsDisplayed] = useState(false);
+type HeaderProps = {
+  isDisplayed?: boolean;
+};
 
-  return (
+const Header: FunctionComponent<HeaderProps> = ({ isDisplayed = false }) => {
+  const [isDisplayedSpMenu, setIsDisplayedSpMenu] = useState(false);
+
+  return isDisplayed ? (
     <>
       <div className={styles.Header}>
         <a href="/">
@@ -62,7 +66,7 @@ const Header: FunctionComponent = () => {
           </div>
           <button
             onClick={() => {
-              setIsDisplayed(true);
+              setIsDisplayedSpMenu(true);
             }}
           >
             <img
@@ -74,13 +78,13 @@ const Header: FunctionComponent = () => {
         </div>
       </div>
       <SpMenu
-        isDisplayed={isDisplayed}
+        isDisplayed={isDisplayedSpMenu}
         closeSpMenu={() => {
-          setIsDisplayed(false);
+          setIsDisplayedSpMenu(false);
         }}
       />
     </>
-  );
+  ) : null;
 };
 
 export default Header;

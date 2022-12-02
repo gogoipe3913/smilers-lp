@@ -2,8 +2,12 @@ import React, { FunctionComponent } from "react";
 import classNames from "classnames";
 import * as styles from "./style.module.scss";
 
-const Top: FunctionComponent = () => {
-  return (
+type TopProps = {
+  isDisplayed?: boolean;
+};
+
+const Top: FunctionComponent<TopProps> = ({ isDisplayed = false }) => {
+  return isDisplayed ? (
     <div className={styles.Top}>
       <h1 className={classNames(styles.Top__heading)}>
         <div className={styles.Top__headingSubTextBox}>
@@ -27,7 +31,7 @@ const Top: FunctionComponent = () => {
         <div className={styles.Top__scrollLine} />
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Top;

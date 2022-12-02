@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExplainSmilers from "../organisms/ExplainSmilers";
@@ -12,6 +12,7 @@ import SelectionFlow from "../organisms/SelectionFlow";
 import Footer from "../organisms/Footer";
 import OverviewMovie from "../organisms/OverviewMovie";
 import SEO from "../organisms/SEO";
+import Loading from "../organisms/Loading";
 
 const LpTemplate: FunctionComponent = () => {
   useEffect(() => {
@@ -94,11 +95,21 @@ const LpTemplate: FunctionComponent = () => {
     }
   }, []);
 
+  const [isDisplayedTopView, setIsDisplayedTopView] = useState(false);
+
   return (
     <div className={styles.LpTemplate}>
       <SEO />
-      <Header />
-      <Top />
+      <Loading
+        setIsDisplayedTopView={() => {
+          setIsDisplayedTopView(true);
+        }}
+        className={styles.LpTemplate__loading}
+      />
+      {/* <Header isDisplayed={isDisplayedTopView} />
+      <Top isDisplayed={isDisplayedTopView} /> */}
+      <Header isDisplayed={true} />
+      <Top isDisplayed={true} />
       <ExplainLeague />
       <ExplainSmilers />
       <OverviewMovie isDisplayed={true} />

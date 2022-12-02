@@ -1,0 +1,53 @@
+@import "../../../styles/reset";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.Loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $global-color-white;
+  opacity: 1;
+
+  transition-duration: 0.6s;
+
+  &__fadeOut {
+    opacity: 0;
+  }
+
+  & &__progressNumber {
+    font-size: 20px;
+    color: $global-color-purple;
+  }
+
+  & &__progressBar {
+    position: relative;
+    width: 50%;
+    height: 8px;
+    background-color: $global-color-gray-2;
+  }
+
+  & &__progressBarColored {
+    position: absolute;
+    height: 100%;
+    background-color: $global-color-purple;
+    animation: progress 4s normal;
+    animation-fill-mode: forwards;
+  }
+
+  & &__progressNumber + &__progressBar {
+    margin-top: 32px;
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

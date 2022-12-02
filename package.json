@@ -32,6 +32,7 @@
     "react-head": "^3.4.0",
     "react-helmet": "^6.1.0",
     "react-image-lightbox": "^5.1.4",
+    "react-number-easing": "^1.0.2",
     "swiper": "^8.3.2"
   },
   "devDependencies": {
